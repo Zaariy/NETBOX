@@ -1,7 +1,9 @@
 nav {
     background-color: var(--main-color-b);
-    position: fixed;
+    position: sticky;
+    z-index: 30;
     width: 100%;
+    top: 0;
 }
 
 nav .navGation {
@@ -79,6 +81,7 @@ nav .menu .mainMenu {
     left: 0;
     top: 37px;
     background-color: var(--main-color-orange);
+    z-index: 33;
 }
 
 nav .menu .mainMenu .sys {
