@@ -21,7 +21,7 @@ function Navigation() {
                     <img src={logo} alt='logo'></img>
                     <ul className='mainNav'>
                         <li ><a href='#'>Movies</a></li>
-                        <li><a href='#'>Pupoler</a></li>
+                        <li><a href='#'>Popular</a></li>
                         <li><a href='#'>Tranding</a></li>
                     </ul>
                     <div className='menu'>

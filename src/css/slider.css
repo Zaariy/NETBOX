@@ -1,5 +1,5 @@
 header .slider {
-    height: 85vh;
+    height: 88.4vh;
     position: relative;
     background-size: cover;
 }
@@ -100,9 +100,15 @@ header .slider .text .clickSlid {
 header .slider .text .clickSlid span {
     background-color: var(--main-color-white);
     border: 2px solid var(--main-color-orange);
-    width: 30px;
+    width: 50px;
     cursor: pointer;
     height: 5px;
     border-radius: 10px;
     margin: 0 10px;
+}
+
+/* Active icons */
+header .slider .text .clickSlid .activeIcons {
+
+    background-color: var(--main-color-orange) !important;
 }

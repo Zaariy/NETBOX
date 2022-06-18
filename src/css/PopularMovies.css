@@ -1,0 +1,111 @@
+.popularMovies {
+    margin-top: 50px;
+    height: 70vh;
+}
+
+.tag>span {
+    color: var(--main-color-orange);
+}
+
+.tag {
+    color: var(--main-color-b);
+}
+
+@media (max-width: 767px) {
+
+    .popularMovies .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .popularMovies .choices {
+        width: 100% !important;
+    }
+}
+
+.popularMovies .choices {
+
+    background-color: var(--main-color-b);
+    color: var(--main-color-white);
+    width: 350px;
+    margin-top: 25px;
+    height: 30px;
+    display: flex;
+    border-radius: 10px;
+
+
+}
+
+.popularMovies .choices span {
+
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.activeIconsOrange {
+    background-color: var(--main-color-orange);
+}
+
+.popularMovies .cartMovies {
+    display: flex;
+    margin-top: 50px;
+    width: 140px;
+    margin-left: 70px;
+    position: relative;
+    cursor: grabbing;
+    margin-bottom: 40px;
+    flex-direction: row;
+
+}
+
+.popularMovies .cartMovies::before {
+    content: attr(data);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color-orange);
+    background-color: var(--main-color-b);
+    color: var(--main-color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -20px;
+    top: -20px;
+
+}
+
+.popularMovies .cartMovies img {
+    width: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popularMovies .cartMovies h3 {
+    text-align: center;
+    font-size: 14px;
+}
+
+.popularMovies .content {
+    display: flex;
+    justify-content: space-around;
+    overflow-x: scroll;
+    margin-top: 45px;
+}
+
+.popularMovies .content::-webkit-scrollbar {
+
+    width: 20px;
+
+}
+
+.popularMovies .content::-webkit-scrollbar-thumb {
+    background: var(--main-color-orange);
+    border-radius: 10px;
+    height: 5px !important;
+}

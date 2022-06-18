@@ -1,0 +1,80 @@
+.tvShows {
+    background-color: var(--main-color-b);
+    height: 70vh;
+}
+
+.tvShows h1 {
+    color: var(--main-color-white);
+    text-align: center;
+    padding-top: 30px;
+}
+
+.tvShows h2 {
+    color: var(--main-color-white);
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tvShows h2>span {
+    color: var(--main-color-orange);
+}
+
+.tvShows .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.tvShows .content .tvCards img {
+    width: 170px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tvShows .content .tvCards {
+    position: relative;
+    width: 170px;
+    margin-top: 80px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
+
+.tvShows .content .tvCards::before {
+    content: attr(data);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color-orange);
+    background-color: var(--main-color-b);
+    color: var(--main-color-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -20px;
+    top: -20px;
+}
+
+.tvShows .content .tvCards .cart h3 {
+    text-align: center;
+    color: var(--main-color-white);
+    font-size: 15px;
+    margin-top: 5px;
+
+}
+
+.tvShows .content::-webkit-scrollbar {
+
+    width: 20px;
+
+}
+
+.tvShows .content::-webkit-scrollbar-thumb {
+    background: var(--main-color-orange);
+    border-radius: 10px;
+    height: 5px !important;
+}
