@@ -1,0 +1,61 @@
+.trandingMovies {
+    margin-top: 70px;
+}
+
+.trandingMovies .cartMovies {
+    display: flex;
+    margin-top: 50px;
+    width: 140px;
+    margin-left: 70px;
+    position: relative;
+    cursor: grabbing;
+    margin-bottom: 40px;
+    flex-direction: row;
+
+}
+
+.trandingMovies .content {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.trandingMovies .cartMovies::before {
+    content: attr(data);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color-orange);
+    background-color: var(--main-color-b);
+    color: var(--main-color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -20px;
+    top: -20px;
+
+}
+
+.trandingMovies .cartMovies img {
+    width: 140px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.trandingMovies .cartMovies h3 {
+    text-align: center;
+    font-size: 14px;
+}
+
+.trandingMovies .content::-webkit-scrollbar {
+
+    width: 20px;
+
+}
+
+.trandingMovies .content::-webkit-scrollbar-thumb {
+    background: var(--main-color-orange);
+    border-radius: 10px;
+    height: 5px !important;
+}
