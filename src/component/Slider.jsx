@@ -15,7 +15,7 @@ function Slider() {
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         // Ids of Movies
-        let list = [526896, 338953, 752623];
+        let list = [526896, 338953, 802401];
         // componentWillMounte
         setLoading(true);
         axios(`https://api.themoviedb.org/3/movie/${list[counter]}?api_key=${APP_KEY}&language=en`)
@@ -50,7 +50,7 @@ function Slider() {
            
         }
     }, [counter])
-    
+    console.log(data)    
    
     return (
         <div>

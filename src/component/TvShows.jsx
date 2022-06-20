@@ -4,6 +4,7 @@ import APP_KEY from '../APP_KEY.js';
 import '../css/tvShows.css';
 import { Event } from '../S-FremworkEvents.js';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const events = new Event();
 
@@ -28,7 +29,8 @@ function TvShows() {
                             return (
                                 <div className='tvCards' data={data?.vote_average}  key={data?.id}>
                                     <div className='cart' >
-                                        <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt=''></img>
+
+                                        <Link state={{'id' : data?.id , 'kind' : 'tv'}} to={'/movie'} ><img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='img'></img></Link>
                                         <h3>{ data.original_name}</h3>
                                     </div>
                                </div>

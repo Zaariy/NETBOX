@@ -13,11 +13,10 @@ function SearchDetailes() {
     const id = searchdata.state?.id;
     const [counter, setCounter] = useState(1);
     const [typeSearch, setTypeSearch] = useState('movie');
-    const [dataSelect, setSelect] = useState({ "movie": false, "tv": false, "preson": false });
+    const [dataSelect, setSelect] = useState({ "movie": true, "tv": false, "preson": false });
     const {data , loading} =  FetchApi(`https://api.themoviedb.org/3/search/${typeSearch}?api_key=${APP_KEY}&query=${id}&page=${counter}`)
-    
-
-
+   
+    console.log(data)
     function increaseDecreasesCounter(state) {
         // this function it is just increasing or 
         // decreaseing value of Counter Staste
@@ -88,7 +87,7 @@ function SearchDetailes() {
                                 }
                                 return (
                                     <div className='items' key={data?.id}>
-                                        <Link to={'/'} ><img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='img'></img></Link>
+                                        <Link state={{'id' : data?.id , 'kind' : dataSelect.movie ? 'movie' : 'tv'}} to={'/movie'} ><img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='img'></img></Link>
                                         <div className='text'>
                                            
                                             
@@ -108,7 +107,7 @@ function SearchDetailes() {
                         <div className='content' >
                             <ul className='frst'>
                                 <li>
-                                    Search For :
+                                    Categories :
                                     <ul className='second'>
                                         <li style={{'backgroundColor': dataSelect.movie ? "var(--main-color-orange)" : ''}}  onClick={(e) => {
                                             setTypeSearch(e.target.attributes['value'].value)

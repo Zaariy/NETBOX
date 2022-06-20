@@ -7,7 +7,7 @@ function Footer() {
         <footer>
             <div className="container" >
                 <img src={logo} alt='logo'></img>
-                <div className='text' >
+                <div className='textt' >
                     <h2>Company</h2>
                     <ul>
                         <li>About</li>

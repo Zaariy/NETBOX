@@ -5,7 +5,7 @@ import MainPage from './component/MainPage.jsx';
 import SearchDetailes from './component/SearchDetailes';
 import Navigation from './component/Navgation';
 import {BrowserRouter , Routes , Route } from 'react-router-dom';
-
+import ShowMovies from './component/ShowMovie';
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
               <SearchDetailes  />
             </div>
           } /> 
+          <Route  path='/movie' element={<ShowMovies />} />
         </Routes>
       </BrowserRouter>
    

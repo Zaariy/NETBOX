@@ -2,6 +2,7 @@ import React, { useEffect} from "react";
 import {Event} from '../S-FremworkEvents.js'
 import FetchApi from '../FetchApi.js';
 import APP_KEY from "../APP_KEY.js";
+import { Link }  from 'react-router-dom';
 import '../css/tranding.css';
 
 
@@ -30,7 +31,9 @@ function TrandingMovies() {
                             return (
                             <div className='cartMovies' data={data?.vote_average} key={data?.id} >
                                 <div className='cart'>
-                                    <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt=''></img>
+                                        <Link  state={{'id' : data?.id , 'kind' : 'movie'}} to={'/movie'}>
+                                            <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt=''></img>
+                                        </Link>
                                     <h3>{data?.title || data?.original_name }</h3>
                                 </div>
                             </div>)
