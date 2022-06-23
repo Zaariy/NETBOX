@@ -24,7 +24,7 @@ function Navigation() {
                         <li ><a href='/'>Home</a></li>
                         <li ><a href='#'>Movies</a></li>
                         <li><a href='#'>Popular</a></li>
-                        <li><a href='#'>Tranding</a></li>
+                        <li><a href='/trand'>Tranding</a></li>
                     </ul>
                     <div className='menu'>
                         <FontAwesomeIcon className='menuBars'  onClick={() =>  setStatusMenu(!seeStatusMenu) } icon={faBars} />
@@ -33,7 +33,7 @@ function Navigation() {
                             <li ><Link to={'/'}><FontAwesomeIcon icon={faHouse} />Home</Link></li>
                             <li ><a href='#'><FontAwesomeIcon icon={faFilm} />Movies</a></li>
                             <li><a href='#'><FontAwesomeIcon icon={faFire} />Pupoler</a></li>
-                            <li><a href='#'><FontAwesomeIcon icon={faRankingStar} />Tranding</a></li>
+                            <li><a href='/trand'><FontAwesomeIcon icon={faRankingStar} />Tranding</a></li>
                             <li className='sys'>
                                 System :
                                 <ul className='subMenu'>

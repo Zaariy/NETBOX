@@ -1,19 +1,29 @@
 header .slider {
-    height: 88.4vh;
+    height: 100vh;
     position: relative;
     background-size: cover;
+}
+
+header .sliderimg .animation {
+    height: 88.4vh;
 }
 
 header .slider .dark {
     width: 100%;
     background-color: #393d42b5;
     position: absolute;
-    height: 100%;
+    height: calc(100% - 44px);
     z-index: 1;
 }
 
+@media (max-width : 767px) {
+    header .slider .dark {
+        height: calc(100% - 38px);
+    }
+}
+
 header .slider .container {
-    height: 100%;
+    height: calc(100% - 44px);
 }
 
 header .slider .text {
@@ -100,9 +110,9 @@ header .slider .text .clickSlid {
 header .slider .text .clickSlid span {
     background-color: var(--main-color-white);
     border: 2px solid var(--main-color-orange);
-    width: 50px;
+    width: 10px;
     cursor: pointer;
-    height: 5px;
+    height: 10px;
     border-radius: 10px;
     margin: 0 10px;
 }

@@ -201,3 +201,15 @@
         display: none;
     }
 }
+
+.searchDetails nav {
+    background-color: var(--main-color-b);
+}
+
+.searchDetails .search .content {
+    margin-top: 0;
+}
+
+.searchDetails .search .content {
+    justify-content: center;
+}

@@ -3,7 +3,7 @@ import '../css/slider.css';
 import { useState } from 'react';
 import APP_KEY from '../APP_KEY';
 import axios from 'axios';
-
+import Navigation from './Navgation.jsx'
 
 
 
@@ -15,7 +15,7 @@ function Slider() {
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         // Ids of Movies
-        let list = [526896, 338953, 802401];
+        let list = [526896, 639933, 453395];
         // componentWillMounte
         setLoading(true);
         axios(`https://api.themoviedb.org/3/movie/${list[counter]}?api_key=${APP_KEY}&language=en`)
@@ -50,14 +50,14 @@ function Slider() {
            
         }
     }, [counter])
-    console.log(data)    
+       
    
     return (
-        <div>
-           
+        <div className='sliderimg'>
             {
                 loading ? 
-                    <div className='slider' style={{ 'backgroundImage' : `url(https://image.tmdb.org/t/p/original/${data?.backdrop_path})`}}>
+                <div className='slider' style={{ 'backgroundImage' : `url(https://image.tmdb.org/t/p/original/${data?.backdrop_path})`}}>
+                        <Navigation />
                         <div className='dark' ></div>
                         <div className='container' >
                             <div className='content' >
@@ -78,7 +78,14 @@ function Slider() {
                             </div>
                         </div>
                     </div>
-                 : <div>Loading ....</div> 
+                 :  <div className='animation'>
+                            <span>L</span>        
+                            <span>O</span>
+                            <span>D</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>G</span>
+                    </div> 
                 // loading ? counter +=1 : counter=counter
             }
         </div>

@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import '../css/SearchDetailes.css';
 import FetchApi from '../FetchApi.js';
 import APP_KEY from '../APP_KEY.js';
-import {} from '@fortawesome/free-regular-svg-icons'
 import { useState } from 'react';
+import Navigation from './Navgation.jsx';
+import Search from './Search.jsx';
 
 
 function SearchDetailes() {
@@ -16,7 +17,6 @@ function SearchDetailes() {
     const [dataSelect, setSelect] = useState({ "movie": true, "tv": false, "preson": false });
     const {data , loading} =  FetchApi(`https://api.themoviedb.org/3/search/${typeSearch}?api_key=${APP_KEY}&query=${id}&page=${counter}`)
    
-    console.log(data)
     function increaseDecreasesCounter(state) {
         // this function it is just increasing or 
         // decreaseing value of Counter Staste
@@ -75,6 +75,8 @@ function SearchDetailes() {
     
     return (
         <div className='searchDetails'>
+            <Navigation />
+            <Search />
             <div className='container' >
                 <h1 className='tag'><span>Search </span>Resolute: </h1> 
                 <div className='content' >
@@ -99,7 +101,14 @@ function SearchDetailes() {
                                         </div>
                                     </div>
                                 )
-                            }) : <div >Loadding...</div>
+                            }) : <div className='animation'>
+                                    <span>L</span>        
+                                    <span>O</span>
+                                    <span>D</span>
+                                    <span>I</span>
+                                    <span>N</span>
+                                    <span>G</span>
+                                </div> 
                        }
                     </div>
                     <div className='selectType'>

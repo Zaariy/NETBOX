@@ -13,7 +13,11 @@ function TvShows() {
     const {data , loading } = FetchApi(`https://api.themoviedb.org/3/tv/popular?api_key=${APP_KEY}&language=en-US&page=1`)
     useEffect(() => {
         // this for Scrolling 
-        events.scrollXhorizontal('.tvShows .content', '.tvCards');
+        const {RemoveEvnetScrollXhorizontal} = events.scrollXhorizontal('.tvShows .content', '.tvCards');
+        
+        return () => {
+            RemoveEvnetScrollXhorizontal()
+        }
     } , [])
     return (
         <div className='tvShows'>
@@ -35,7 +39,14 @@ function TvShows() {
                                     </div>
                                </div>
                             )
-                        })  : <div>Loading ....</div>    
+                        })  : <div className='animation'>
+                                <span>L</span>        
+                                <span>O</span>
+                                <span>D</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                            </div>   
                     }
                 </div>
            </div>

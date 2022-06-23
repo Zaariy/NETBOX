@@ -12,7 +12,11 @@ function TrandingMovies() {
     const {data , loading}  =  FetchApi(`https://api.themoviedb.org/3/trending/movie/day?api_key=${APP_KEY}`)
 
     useEffect(() => {
-        event.scrollXhorizontal('.trandingMovies .content' , '.trandingMovies .cartMovies')
+        const {RemoveEvnetScrollXhorizontal} = event.scrollXhorizontal('.trandingMovies .content', '.trandingMovies .cartMovies')
+        return () => {
+            RemoveEvnetScrollXhorizontal()
+
+        }
     } , [])
 
 

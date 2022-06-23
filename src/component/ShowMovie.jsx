@@ -12,8 +12,9 @@ import { useLocation } from 'react-router-dom';
 const star = require('../images/star-full.png');
 // Catst Component
 function Casts(props) {
-    const id_movie = props.id;
-    const {data , loading } = FetchApi(`https://api.themoviedb.org/3/movie/${id_movie}/credits?api_key=${APP_KEY}`)
+    const id_movie = props?.id;
+    const kind = props.kind;
+    const {data , loading } = FetchApi(`https://api.themoviedb.org/3/${kind}/${id_movie}/credits?api_key=${APP_KEY}`)
     
 
     return (
@@ -27,12 +28,19 @@ function Casts(props) {
                                return
                            }
                             return (
-                                <div className='item' >
+                                <div className='item' key={data?.id}>
                                     <img src={`https://image.tmdb.org/t/p/w500${data?.profile_path}`}></img>
                                     <span>{ data?.name }</span>
                                 </div>
                             )
-                        }) : <div>Loadding ..</div>
+                        }) : <div className='animation'>
+                                <span>L</span>        
+                                <span>O</span>
+                                <span>D</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                            </div>
 
 
                     }
@@ -47,8 +55,9 @@ function Casts(props) {
 // Trailer Component
 function TrailerShow(props) {
     const id_movie = props.id;
+    const kind = props.kind;
 
-    const { data, loading } = FetchApi(`https://api.themoviedb.org/3/movie/${id_movie}/videos?api_key=${APP_KEY}`)
+    const { data, loading } = FetchApi(`https://api.themoviedb.org/3/${kind}/${id_movie}/videos?api_key=${APP_KEY}`)
     
 
     
@@ -59,17 +68,22 @@ function TrailerShow(props) {
                         <h1 className='tag'><span>Trailer </span>Show</h1>
                         <div className='content' >
                             {
-                        data?.results.map((data, index) => {
+                              loading ?  data?.results.map((data, index) => {
 
                             return (
                                         
                             <div className='item' key={data?.id}>
-                                <iframe 
-                                        src={`https://www.youtube.com/embed/${data?.key}`}>
-                                </iframe>
+                                <iframe  title={data?.title} src={`https://www.youtube.com/embed/${data?.key}`}></iframe>
                             </div>
                                     )
-                                })
+                                }) : <div className='animation'>
+                                        <span>L</span>        
+                                        <span>O</span>
+                                        <span>D</span>
+                                        <span>I</span>
+                                        <span>N</span>
+                                        <span>G</span>
+                                    </div>
                             }
                         </div>
                     </div>
@@ -79,9 +93,10 @@ function TrailerShow(props) {
 
 // Reacommandation Component
 function Reacommendation(props) {
-    const id_movie = props.id
-    const {data , loading} = FetchApi(`https://api.themoviedb.org/3/movie/${id_movie}/recommendations?api_key=${APP_KEY}&language=en-US&page=1`)
-    console.log(data)
+    const id_movie = props.id;
+    const kind = props.kind;
+    const {data , loading} = FetchApi(`https://api.themoviedb.org/3/${kind}/${id_movie}/recommendations?api_key=${APP_KEY}&language=en-US&page=1`)
+    
     return (
         <div className='recommendation' >
             <div className='container' >
@@ -95,10 +110,17 @@ function Reacommendation(props) {
                                         <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`}></img>
                                         
                                     </Link>
-                                    <span>{ data?.original_title}</span>
+                                    <span>{ data?.original_title || data?.original_name}</span>
                                 </div>
                             )
-                        }) : <div className='loading' >Loading....</div>
+                        }) : <div className='animation'>
+                                <span>L</span>        
+                                <span>O</span>
+                                <span>D</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                            </div>
                     }
                </div>
             </div>
@@ -111,7 +133,7 @@ function ShowMovies() {
     const data_id = useLocation();
     const kind = data_id.state.kind
     const id_movie = data_id.state?.id;
-    
+  
     const {data , loading} = FetchApi(`https://api.themoviedb.org/3/${kind}/${id_movie}?api_key=${APP_KEY}&language=en`) 
     
 
@@ -153,12 +175,19 @@ function ShowMovies() {
                             </div>
 
                         </div>
-                    ) : <div>Loading</div>
+                    ) : <div className='animation'>
+                            <span>L</span>        
+                            <span>O</span>
+                            <span>D</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>G</span>
+                        </div>
                 }
 
-                <Casts id={id_movie}  />
-                <TrailerShow id={id_movie} /> 
-                <Reacommendation id={id_movie} />
+                <Casts id={id_movie} kind={kind} />
+                <TrailerShow id={id_movie} kind={kind} /> 
+                <Reacommendation id={id_movie} kind={kind} />
                 <Footer />
             </div>
         </div>

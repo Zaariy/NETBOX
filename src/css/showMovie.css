@@ -152,6 +152,10 @@
     height: 45vh;
 }
 
+.showMovie .content .trailer .animation {
+    height: 26vh;
+}
+
 .showMovie .content .trailer .tag {
     color: var(--main-color-white);
     text-align: center;

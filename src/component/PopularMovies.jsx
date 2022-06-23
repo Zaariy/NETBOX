@@ -22,8 +22,12 @@ function PopularMovies() {
                 setDataMovies(response.data)
                 setLoading(true)
             })
-        // This for scrolling Hirazontale   
-        events.scrollXhorizontal('.popularMovies .content', '.cartMovies');
+            // This for scrolling Hirazontale   
+        const {RemoveEvnetScrollXhorizontal} = events.scrollXhorizontal('.popularMovies .content', '.cartMovies');
+        
+        return () => {
+            RemoveEvnetScrollXhorizontal()
+        }
     } ,[seeState])
     return (
         <div className='popularMovies'>
@@ -56,7 +60,14 @@ function PopularMovies() {
                                     <h3>{data?.title || data?.original_name }</h3>
                                 </div>
                             </div>)
-                       }) : <div>Loading</div>
+                       }) : <div className='animation'>
+                                <span>L</span>        
+                                <span>O</span>
+                                <span>D</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                            </div>
                     } 
                 </div>
                 
