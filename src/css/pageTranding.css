@@ -1,4 +1,4 @@
-.topRate .contentSlaid .ulParent {
+.pageTranding .contentSlaid .ulParent {
     scroll-behavior: smooth;
     height: 70vh;
     display: flex;
@@ -12,7 +12,7 @@
 
 }
 
-.topRate .contentSlaid .ulParent::before {
+.pageTranding .contentSlaid .ulParent::before {
     content: '';
     position: sticky;
     position: -webkit-sticky;
@@ -24,7 +24,7 @@
     box-shadow: 21px 0px 20px #1d2228;
 }
 
-.topRate .contentSlaid .ulParent::after {
+.pageTranding .contentSlaid .ulParent::after {
     content: '';
     position: sticky;
     position: -webkit-sticky;
@@ -36,16 +36,16 @@
     box-shadow: -21px 0px 20px #1d2228;
 }
 
-/* .topRate .contentSlaid .ulParent::-webkit-scrollbar {
+/* .pageTranding .contentSlaid .ulParent::-webkit-scrollbar {
    
 } */
 
-.topRate .contentSlaid {
+.pageTranding .contentSlaid {
     position: relative;
 }
 
 
-.topRate .contentSlaid .spanOne {
+.pageTranding .contentSlaid .spanOne {
     color: var(--main-color-white);
     cursor: pointer;
 
@@ -62,7 +62,7 @@
     z-index: 6;
 }
 
-.topRate .contentSlaid .spanOne::after {
+.pageTranding .contentSlaid .spanOne::after {
     content: '';
     background-color: transparent;
     position: absolute;
@@ -77,7 +77,7 @@
     transform: rotateZ(-40deg) translateY(-50%);
 }
 
-.topRate .contentSlaid .spanTow {
+.pageTranding .contentSlaid .spanTow {
     color: var(--main-color-white);
     cursor: pointer;
 
@@ -94,7 +94,7 @@
     z-index: 6;
 }
 
-.topRate .contentSlaid .spanTow::after {
+.pageTranding .contentSlaid .spanTow::after {
     content: '';
     background-color: transparent;
     position: absolute;
@@ -108,11 +108,11 @@
     transform: rotateZ(132deg) translateX(-50%);
 }
 
-.topRate nav {
+.allpageTranding nav {
     background-color: var(--main-color-b);
 }
 
-.topRate .contentSlaid .ulParent .frst {
+.pageTranding .contentSlaid .ulParent .frst {
     height: 350px;
     width: 500px;
     background-position: center;
@@ -127,49 +127,49 @@
 }
 
 @media (max-width :767px) {
-    .topRate .contentSlaid .ulParent {
+    .pageTranding .contentSlaid .ulParent {
         height: calc(100vh - 44.2px);
     }
 
-    .topRate .contentSlaid .ulParent .frst {
+    .pageTranding .contentSlaid .ulParent .frst {
         width: 80%;
         margin: 0 20px;
         height: calc(100vh - 44.2px);
         transform: none;
     }
 
-    .topRate .contentSlaid .ulParent .frst .text {
+    .pageTranding .contentSlaid .ulParent .frst .text {
         display: none;
 
     }
 
-    .topRate .contentSlaid .ulParent::after {
+    .pageTranding .contentSlaid .ulParent::after {
         display: none;
     }
 
-    .topRate .contentSlaid .ulParent .frst:hover .text {
+    .pageTranding .contentSlaid .ulParent .frst:hover .text {
         display: block !important;
         width: 100%;
     }
 
-    .topRate .contentSlaid .ulParent .text .ulChild {
+    .pageTranding .contentSlaid .ulParent .text .ulChild {
         width: 100%;
     }
 
-    .topRate .contentSlaid .ulParent::before {
+    .pageTranding .contentSlaid .ulParent::before {
         display: none;
     }
 }
 
-.topRate .contentSlaid .ulParent .frst:first-of-type {
+.pageTranding .contentSlaid .ulParent .frst:first-of-type {
     margin-left: 250px;
 }
 
-.topRate .contentSlaid .frst:last-of-type {
+.pageTranding .contentSlaid .frst:last-of-type {
     margin-right: 250px;
 }
 
-.topRate .contentSlaid .ulParent .frst .text {
+.pageTranding .contentSlaid .ulParent .frst .text {
     width: 45%;
     height: 100%;
     background-color: #1d2228de;
@@ -180,23 +180,23 @@
     z-index: 3;
 }
 
-.topRate .contentSlaid .ulChild {
+.pageTranding .contentSlaid .ulChild {
     height: 100%;
     color: var(--main-color-white);
 
 }
 
-.topRate .contentSlaid .ulChild li {
+.pageTranding .contentSlaid .ulChild li {
     margin-left: 10px;
 
 }
 
-.topRate .contentSlaid .ulChild li:first-of-type {
+.pageTranding .contentSlaid .ulChild li:first-of-type {
     padding-top: 20px;
 
 }
 
-.topRate .contentSlaid ul li h1 {
+.pageTranding .contentSlaid ul li h1 {
     font-size: 18px;
     text-align: center;
     font-weight: 700;
@@ -204,30 +204,30 @@
     /* overflow: hidden; */
 }
 
-.topRate .contentSlaid ul li:nth-child(2) {
+.pageTranding .contentSlaid ul li:nth-child(2) {
     text-align: center;
     margin-top: 5px;
 }
 
-.topRate .contentSlaid .ulChild li:nth-child(3) img {
+.pageTranding .contentSlaid .ulChild li:nth-child(3) img {
     /* text-align: center; */
     width: 20px;
     margin-right: 5px;
 
 }
 
-.topRate .contentSlaid .ulChild li:nth-child(2) {
+.pageTranding .contentSlaid .ulChild li:nth-child(2) {
     margin-top: 15px;
 }
 
-.topRate .contentSlaid ul li:nth-child(3) {
+.pageTranding .contentSlaid ul li:nth-child(3) {
     display: flex;
     justify-content: flex-start;
     margin-top: 12px;
     margin-left: 17px;
 }
 
-.topRate .contentSlaid .ulChild li:nth-child(3) span:nth-of-type(1) {
+.pageTranding .contentSlaid .ulChild li:nth-child(3) span:nth-of-type(1) {
     background-color: var(--main-color-white);
     color: var(--main-color-b);
     padding: 3px 8px;
@@ -235,18 +235,18 @@
     margin-right: 40px;
 }
 
-.topRate .contentSlaid .ulChild li:nth-child(3) span:nth-of-type(2) {
+.pageTranding .contentSlaid .ulChild li:nth-child(3) span:nth-of-type(2) {
     color: var(--main-color-orange);
 }
 
-.topRate .contentSlaid ul li:nth-child(4) h2 {
+.pageTranding .contentSlaid ul li:nth-child(4) h2 {
     font-size: 18px;
     font-weight: 600;
     margin: 5px 0;
 
 }
 
-.topRate .contentSlaid .ulChild li:nth-child(4) p {
+.pageTranding .contentSlaid .ulChild li:nth-child(4) p {
     font-weight: 300;
     margin-bottom: 5px;
     height: 114px;
@@ -254,7 +254,7 @@
     text-align: start;
 }
 
-.topRate .contentSlaid .ulChild li:last-of-type a {
+.pageTranding .contentSlaid .ulChild li:last-of-type a {
 
     color: var(--main-color-white);
     padding: 8px 20px;
@@ -263,7 +263,7 @@
     border-radius: 10px;
 }
 
-.topRate .contentSlaid .ulChild li:last-of-type {
+.pageTranding .contentSlaid .ulChild li:last-of-type {
     margin-top: 15px;
     text-align: start;
 
@@ -347,3 +347,121 @@
 .activeGrabbing {
     cursor: grabbing !important;
 }
+
+.pageTranding .contentSlaid .ulParent::-webkit-scrollbar {
+    /* background-color: red; */
+    height: 10px;
+}
+
+
+
+.pageTranding .contentSlaid .ulParent::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-orange);
+    border-radius: 20px;
+}
+
+
+
+.allpageTranding .content {
+    display: flex;
+    /* height: 200vh; */
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+@media (max-width : 767px) {
+    .allpageTranding .content {
+        flex-direction: column;
+    }
+
+    .allpageTranding .container .sidBar {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .allpageTranding .container .sidBar .select {
+        width: 100% !important;
+    }
+
+    .allpageTranding .content .presentMovies {
+        width: 100% !important;
+        justify-content: center;
+    }
+
+    .allpageTranding button {
+        width: 100%;
+        transform: translateX(50%);
+        right: 55% !important;
+
+    }
+}
+
+.allpageTranding .tag {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.allpageTranding .content .sidBar {
+    width: 30%;
+}
+
+.allpageTranding .content .presentMovies {
+    width: 68%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.allpageTranding .container {
+    position: relative;
+    height: 100%;
+}
+
+.allpageTranding button {
+    width: 60%;
+    background-color: var(--main-color-b);
+    color: var(--main-color-white);
+    right: 95px;
+    position: absolute;
+    bottom: -20px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+}
+
+.allpageTranding .sidBar .select {
+    background-color: var(--main-color-white);
+    height: 200px;
+    border-radius: 20px;
+    width: 60%;
+}
+
+.allpageTranding .sidBar .select ul {
+    /* margin-top: 50px; */
+    padding-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+
+}
+
+.allpageTranding .sidBar .select ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.allpageTranding .sidBar .select ul li label {
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+/* Ending allPageTranding */

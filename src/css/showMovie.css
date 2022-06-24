@@ -1,6 +1,6 @@
 .showMovie {
     width: 100%;
-    background-color: var(--main-color-white);
+    /* background-color: var(--main-color-white); */
     /* height: 200vh; */
 }
 
@@ -198,14 +198,13 @@
 
 .showMovie .content::-webkit-scrollbar {
 
-    width: 20px;
+    height: 10px;
 
 }
 
 .showMovie .content::-webkit-scrollbar-thumb {
     background: var(--main-color-orange);
     border-radius: 10px;
-    height: 5px !important;
 }
 
 /* Casts */
@@ -230,7 +229,7 @@
     margin-left: 30px;
 }
 
-.showMovie .content .casts .content .item span {
+/* .showMovie .content .casts .content .item span {
     display: block;
     font-size: 17px;
     margin-top: 10px;
@@ -239,11 +238,11 @@
 
 .showMovie .casts h1 {
     font-size: 22px;
-}
+} */
 
 /* recommendation */
-.showMovie .recommendation {
-    margin-top: 90px;
+.recommendation {
+    margin-top: 60px;
 }
 
 .showMovie .recommendation .content {
@@ -253,21 +252,16 @@
     margin-bottom: 20px;
 }
 
-.showMovie .recommendation .content img {
+.showMovie .content .recommendation .content .text {
+    margin-top: 0;
+
+}
+
+/* .recommendation .content .cart {
+    background-color: white;
+} */
+
+/* .showMovie .recommendation .content img {
     width: 150px;
     border-radius: 10px;
     /* height: 200px; */
-
-}
-
-.showMovie .recommendation .content .item {
-    margin-left: 30px;
-}
-
-.showMovie .recommendation .content .item span {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 400;
-}

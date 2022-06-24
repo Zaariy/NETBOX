@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const events = new Event();
-
+const star = require('../images/starOrange.png');
 function TvShows() {
 
     const {data , loading } = FetchApi(`https://api.themoviedb.org/3/tv/popular?api_key=${APP_KEY}&language=en-US&page=1`)
@@ -31,13 +31,16 @@ function TvShows() {
                                 return
                             }
                             return (
-                                <div className='tvCards' data={data?.vote_average}  key={data?.id}>
-                                    <div className='cart' >
-
-                                        <Link state={{'id' : data?.id , 'kind' : 'tv'}} to={'/movie'} ><img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='img'></img></Link>
-                                        <h3>{ data.original_name}</h3>
-                                    </div>
-                               </div>
+                                <div className='cart'  key={data?.id}>
+                                        <Link to='/movie' state={{"id" : data?.id , "kind" :  'tv'}}>
+                                            <img className='logo' src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='logo'></img>
+                                        </Link>
+                                        <div className='text'>
+                                            <p>{data?.release_date || data?.first_air_date}</p>
+                                            <h3>{ data?.title || data?.name}</h3>
+                                            <span><img src={star}></img>{data?.vote_average}<span>tv</span> </span>
+                                        </div>
+                                </div>
                             )
                         })  : <div className='animation'>
                                 <span>L</span>        

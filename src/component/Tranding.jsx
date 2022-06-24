@@ -7,7 +7,7 @@ import '../css/tranding.css';
 
 
 const event = new Event();
-
+const star = require('../images/starOrange.png');
 function TrandingMovies() {
     const {data , loading}  =  FetchApi(`https://api.themoviedb.org/3/trending/movie/day?api_key=${APP_KEY}`)
 
@@ -33,14 +33,19 @@ function TrandingMovies() {
                                 return
                             }
                             return (
-                            <div className='cartMovies' data={data?.vote_average} key={data?.id} >
-                                <div className='cart'>
-                                        <Link  state={{'id' : data?.id , 'kind' : 'movie'}} to={'/movie'}>
-                                            <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt=''></img>
+                                <div className='cart'  key={data?.id}>
+                                        <Link to='/movie' state={{"id" : data?.id , "kind" : 'movie' }}>
+                                            <img className='logo' src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='logo'></img>
                                         </Link>
-                                    <h3>{data?.title || data?.original_name }</h3>
+                                        <div className='text'>
+                                            <p>{data?.release_date || data?.first_air_date}</p>
+                                            <h3>{ data?.title || data?.name}</h3>
+                                            <span><img src={star}></img>{data?.vote_average}<span>movie</span> </span>
+                                        </div>
                                 </div>
-                            </div>)
+                            
+                            )
+
                        }) : <div>Loading</div>
                     } 
                    

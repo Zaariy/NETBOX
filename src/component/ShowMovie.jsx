@@ -69,7 +69,9 @@ function TrailerShow(props) {
                         <div className='content' >
                             {
                               loading ?  data?.results.map((data, index) => {
-
+                                  if (index > 5) {
+                                    return
+                                }
                             return (
                                         
                             <div className='item' key={data?.id}>
@@ -96,7 +98,7 @@ function Reacommendation(props) {
     const id_movie = props.id;
     const kind = props.kind;
     const {data , loading} = FetchApi(`https://api.themoviedb.org/3/${kind}/${id_movie}/recommendations?api_key=${APP_KEY}&language=en-US&page=1`)
-    
+    console.log(data)
     return (
         <div className='recommendation' >
             <div className='container' >
@@ -105,12 +107,15 @@ function Reacommendation(props) {
                     {
                         loading ? data.results.map((data) => {
                             return (
-                                <div className='item'>
-                                    <Link state={{ "id": data?.id, "kind": 'movie' }} to={'/movie'}>
-                                        <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`}></img>
-                                        
-                                    </Link>
-                                    <span>{ data?.original_title || data?.original_name}</span>
+                                <div className='cart'  key={data?.id}>
+                                        <Link to='/movie' state={{"id" : data?.id , "kind" : kind}}>
+                                            <img className='logo' src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='logo'></img>
+                                        </Link>
+                                        <div className='text'>
+                                            <p>{data?.release_date || data?.first_air_date}</p>
+                                            <h3>{ data?.title || data?.name}</h3>
+                                        <span><img src={star}></img>{data?.vote_average}<span>{ data?.media_type}</span> </span>
+                                        </div>
                                 </div>
                             )
                         }) : <div className='animation'>

@@ -6,22 +6,19 @@ import { Event } from '../S-FremworkEvents.js';
 import APP_KEY from '../APP_KEY'; 
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import FetchApi from '../FetchApi';
 const events = new Event();
-
+const star =  require('../images/starOrange.png')
 
 
 function PopularMovies() {
     const [seeState, setState] = useState({ 'movies': true, 'tv': false })
-    const [data, setDataMovies] = useState([]);
-    const [loading, setLoading] = useState(false); 
-    
+    // const [data, setDataMovies] = useState([]);
+    // const [loading, setLoading] = useState(false); 
+    const {data , loading} = FetchApi(`https://api.themoviedb.org/3/${seeState.movies ? "movie" : "tv"}/popular?api_key=${APP_KEY}&language=en-US&page=1`)
     useEffect(() => { 
         
-        axios.get(`https://api.themoviedb.org/3/${seeState.movies ? "movie" : "tv"}/popular?api_key=${APP_KEY}&language=en-US&page=1`)
-            .then((response) => {
-                setDataMovies(response.data)
-                setLoading(true)
-            })
+        
             // This for scrolling Hirazontale   
         const {RemoveEvnetScrollXhorizontal} = events.scrollXhorizontal('.popularMovies .content', '.cartMovies');
         
@@ -50,16 +47,17 @@ function PopularMovies() {
                                 return
                             }
                             return (
-                            <div className='cartMovies' data={data?.vote_average} key={data?.id} >
-                                <div className='cart'>
-                                     {/* <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt=''></img> */}
-                                        <Link to={"/movie"} state={{"id" : data?.id , "kind" : seeState.movies ? "movie" : 'tv'  }}>
-
-                                            <img src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt=''></img>
+                                 <div className='cart'  key={data?.id}>
+                                        <Link to='/movie' state={{"id" : data?.id , "kind" : seeState.movies ? 'movie' : 'tv'}}>
+                                            <img className='logo' src={`https://image.tmdb.org/t/p/w500${data?.poster_path}`} alt='logo'></img>
                                         </Link>
-                                    <h3>{data?.title || data?.original_name }</h3>
-                                </div>
-                            </div>)
+                                        <div className='text'>
+                                            <p>{data?.release_date || data?.first_air_date}</p>
+                                            <h3>{ data?.title || data?.name}</h3>
+                                            <span><img src={star}></img>{data?.vote_average}<span>{seeState.movies ? "movie" : 'tv'}</span> </span>
+                                        </div>
+                                    </div>
+                            )
                        }) : <div className='animation'>
                                 <span>L</span>        
                                 <span>O</span>

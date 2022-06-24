@@ -22,8 +22,7 @@ function Navigation() {
                     <img src={logo} alt='logo'></img>
                     <ul className='mainNav'>
                         <li ><a href='/'>Home</a></li>
-                        <li ><a href='#'>Movies</a></li>
-                        <li><a href='#'>Popular</a></li>
+                        <li><a href='/popular'>Popular</a></li>
                         <li><a href='/trand'>Tranding</a></li>
                     </ul>
                     <div className='menu'>
@@ -31,8 +30,7 @@ function Navigation() {
                         <ul className={seeStatusMenu ? 'mainMenu active' : "mainMenu"}>
 
                             <li ><Link to={'/'}><FontAwesomeIcon icon={faHouse} />Home</Link></li>
-                            <li ><a href='#'><FontAwesomeIcon icon={faFilm} />Movies</a></li>
-                            <li><a href='#'><FontAwesomeIcon icon={faFire} />Pupoler</a></li>
+                            <li><a href='/popular'><FontAwesomeIcon icon={faFire} />Pupoler</a></li>
                             <li><a href='/trand'><FontAwesomeIcon icon={faRankingStar} />Tranding</a></li>
                             <li className='sys'>
                                 System :

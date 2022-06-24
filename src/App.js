@@ -5,7 +5,8 @@ import MainPage from './component/MainPage.jsx';
 import SearchDetailes from './component/SearchDetailes';
 import {BrowserRouter , Routes , Route } from 'react-router-dom';
 import ShowMovies from './component/ShowMovie.jsx';
-import PageTranding from './component/PageTranding.jsx';
+import {PageTranding} from './component/PageTranding.jsx';
+import PopularPage from './component/PagePopular';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
               <SearchDetailes  />
           } /> 
           <Route  path='/movie' element={<ShowMovies />} />
-          <Route path='/trand' element={<PageTranding/>} />
+          <Route path='/trand' element={<PageTranding />} />
+          <Route path='/popular' element={<PopularPage />} />
         </Routes>
       </BrowserRouter>
    
