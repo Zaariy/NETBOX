@@ -14,7 +14,6 @@ function MoreMovies(props) {
     const [page, setPage] = useState(1); 
     const {data , loading} = FetchApi(`https://api.themoviedb.org/3/${seeState.movies ? "movie" : "tv"}/popular?api_key=${APP_KEY}&language=en-US&page=${page}`)
     
-    console.log(data)
     return (
         <div className='content' >
                                 {

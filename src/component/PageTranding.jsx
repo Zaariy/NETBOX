@@ -149,7 +149,6 @@ function PageTranding() {
     const [statetype, setStateType] = useState({ 'movie': true });
     const [ statetypePeriod  , setPeriod] = useState({'day': true})
     const {data , loading} = FetchApi(`https://api.themoviedb.org/3/trending/${statetype.movie ? 'movie' : 'tv'}/${statetypePeriod.day ? 'day' : 'week'}?api_key=${APP_KEY}&page=${page}`)
-    console.log(data)
     return (
         <div>
         <div className='allpageTranding'>
@@ -197,7 +196,14 @@ function PageTranding() {
                                         </div>
                                     </div>
                                 )
-                            }) : <div>loading ...</div>
+                            }) : <div className='animation'>
+                                <span>L</span>        
+                                <span>O</span>
+                                <span>D</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                            </div>
                         }
                     </div>
                     <button onClick={() => setPage(page + 1)}>More</button>

@@ -98,7 +98,6 @@ function Reacommendation(props) {
     const id_movie = props.id;
     const kind = props.kind;
     const {data , loading} = FetchApi(`https://api.themoviedb.org/3/${kind}/${id_movie}/recommendations?api_key=${APP_KEY}&language=en-US&page=1`)
-    console.log(data)
     return (
         <div className='recommendation' >
             <div className='container' >

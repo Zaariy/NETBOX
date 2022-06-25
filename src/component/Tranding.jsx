@@ -46,7 +46,14 @@ function TrandingMovies() {
                             
                             )
 
-                       }) : <div>Loading</div>
+                       }) : <div className='animation'>
+                                <span>L</span>        
+                                <span>O</span>
+                                <span>D</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                            </div> 
                     } 
                    
                 </div>
