@@ -1,0 +1,21 @@
+@use "../../../Styles/global/grid_system" as *;
+// import color 
+@use "../../../Styles/global/global_color" as *;
+
+.container {
+    @include sys_grid('md') {
+        margin: 0 10px;
+    }
+
+}
+
+//
+.m-dashboard {
+    background-color: $background-color;
+    height: 100vh;
+    overflow-y: scroll;
+
+    & .content {
+        font-size: 20px;
+    }
+}

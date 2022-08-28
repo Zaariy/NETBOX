@@ -1,0 +1,23 @@
+.cart {
+  width: 119px;
+}
+.cart .content {
+  display: flex;
+  flex-direction: column;
+}
+.cart .content img {
+  width: 119px;
+  height: 156px;
+  border-radius: 15px;
+}
+.cart .content .info {
+  color: white;
+}
+.cart .content .info h1 {
+  font-size: 12px;
+  font-weight: 600;
+}
+.cart .content .info span {
+  font-size: 0.7em;
+  color: gray;
+}/*# sourceMappingURL=cart.css.map */

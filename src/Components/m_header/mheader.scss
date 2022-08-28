@@ -1,0 +1,11 @@
+header {
+    .content {
+        padding-top: 1em;
+        display: flex;
+        justify-content: space-between;
+
+        & a {
+            margin-right: 0.2em;
+        }
+    }
+}

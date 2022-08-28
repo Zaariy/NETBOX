@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  .container {
+    margin: 0 10px;
+  }
+}
+
+.m-dashboard {
+  background-color: #191b1f;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.m-dashboard .content {
+  font-size: 20px;
+}/*# sourceMappingURL=mainPage.css.map */

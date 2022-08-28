@@ -1,0 +1,48 @@
+.active-m-btn-menu::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  top: -1.1em;
+  height: 50px;
+  background-color: #44c9e6;
+  border: 5px solid #191b1f;
+  border-radius: 50%;
+  z-index: 1;
+}
+.active-m-btn-menu a {
+  z-index: 2;
+  margin-top: -17px;
+}
+
+.m-menu {
+  position: fixed;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 43px;
+  background-color: rgba(68, 201, 230, 0.6588235294);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.m-menu ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+.m-menu ul li {
+  font-size: 1.3em;
+  position: relative;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.m-menu ul li a {
+  color: white;
+}
+.m-menu ul li a .m-menu-icon {
+  font-size: 19px;
+}/*# sourceMappingURL=menu.css.map */

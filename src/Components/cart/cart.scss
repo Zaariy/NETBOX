@@ -1,0 +1,32 @@
+@use "../../Styles/global/global_color" as *;
+
+.cart {
+    width: 119px;
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+
+        & img {
+            width: 119px;
+            height: 156px;
+            border-radius: 15px;
+        }
+
+        & .info {
+            color: $color-text;
+
+            & h1 {
+                font-size: 12px;
+                // text-align: center;
+                font-weight: 600;
+            }
+
+            & span {
+                // text-align: center;
+                font-size: 0.7em;
+                color: gray;
+            }
+        }
+    }
+}
