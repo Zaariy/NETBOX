@@ -1,7 +1,60 @@
 * {
-    list-style-type: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* main colors*/
+:root {
+  --black-color: #030303;
+  --black-cold-color: #101011;
+  --white-color: #f2f2f2;
+  --red-color: #e50914;
+}
+
+.container {
+  padding: 0 10px;
+  /* Small devices (landscape phones, 576px and up) */
+  /* Medium devices (tablets, 768px and up)  */
+  /* Large devices (desktops, 992px and up) */
+  /* Extra large devices (large desktops, 1200px and up) */
+  /* Extra extra large devices (extra large desktops, 1400px and up) */
+}
+
+@media (min-width: 576px) {
+  .container {
+    margin: 0 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    margin: 0 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    margin: 0 300px;
+  }
+}
+
+
+/* background color */
+body {
+  background: var(--black-cold-color);
+  color: var(--white-color);
 }

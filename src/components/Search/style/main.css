@@ -1,0 +1,23 @@
+.search-input {
+    flex: 0.4;
+    position: relative;
+}
+
+.search-input input {
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 81%;
+    width: 100%;
+    background-color: var(--black-color);
+    outline: none;
+    border: none;
+    color: var(--white-color);
+    padding: 0 1rem;
+}
+
+.search-input .icon-search {
+    position: absolute;
+    right: 1em;
+    top: 43%;
+    transform: translateY(-50%);
+}

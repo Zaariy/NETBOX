@@ -1,13 +1,12 @@
 import './App.css';
-import MainPage from './Pages/MainPage';
-import {BrowserRouter , Route , Routes} from 'react-router-dom'
+
+import Home from './pages/Home';
+
 function App() {
   return (
-    <BrowserRouter>
-        <Routes >
-            <Route  path={'/'}  element={<MainPage />}/>
-        </Routes>
-    </BrowserRouter>
+    <main className="App container">
+      <Home />
+    </main>
   )
 }
 
