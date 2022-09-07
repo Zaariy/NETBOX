@@ -24,31 +24,37 @@
 
 @media (min-width: 576px) {
   .container {
-    margin: 0 15px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    margin: 0 25px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    margin: 0 35px;
+    margin-left: 35px;
+    margin-right: 35px;
+
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    margin: 0 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
 @media (min-width: 1400px) {
   .container {
-    margin: 0 300px;
+    margin-left: 300px;
+    margin-right: 300px;
   }
 }
 

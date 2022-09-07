@@ -1,0 +1,42 @@
+.favorite-movie {
+    margin-top: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+.favorite-movie .carts {
+    height: 150px;
+}
+
+.favorite-movie .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.favorite-movie .header h2 {
+    font-size: 1.2rem;
+}
+
+.favorite-movie .cart {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: end;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.favorite-movie .cart:hover {
+    opacity: 0.5;
+}
+
+.favorite-movie .cart .name {
+    width: 50%;
+    font-weight: 600;
+    margin-left: 0.3em;
+    margin-bottom: 0.3em;
+}
