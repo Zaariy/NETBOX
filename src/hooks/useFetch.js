@@ -1,10 +1,12 @@
 import  {useEffect , useState} from 'react';
 import axios from 'axios';
-export const API_KEY = '';
 
-function useFetch(url , method , urlend=null) {
+export const API_KEY = ''
+
+function useFetch(url , method  , urlend=null ,  changing=null) {
     const [data, setData] = useState({data : '' , state : false});
     useEffect(() => {
+
         axios(
             {
                 baseURL: 'https://api.themoviedb.org/3/',
@@ -15,8 +17,11 @@ function useFetch(url , method , urlend=null) {
             setData({ data: data.data, state: true });
         })
 
-    } , [])
-       return {data : data.data , state : data.state}
+
+    } , [[...changing]])
+
+   
+       return {data : data.data , state : data.state }
 }
 
 export default useFetch;

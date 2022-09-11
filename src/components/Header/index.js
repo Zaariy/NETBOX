@@ -9,6 +9,7 @@ import {
     faBars,
     faGear,
     faUser,
+    faCompass ,
     faArrowRightFromBracket
 
 } from '@fortawesome/free-solid-svg-icons';
@@ -22,7 +23,9 @@ function Header() {
     return (
         <header className="container">
             <div className="brand">
-                <img src={brand} alt="brand"></img>
+                <Link to={'/'}>
+                    <img src={brand} alt="brand"></img>
+                </Link>
             </div>
 
             <div className="content">
@@ -46,6 +49,15 @@ function Header() {
                                 Profile
                             </Link>
                         </li>
+
+                        <li>
+                            <Link to='/discovertvshows'>
+                                <FontAwesomeIcon icon={faCompass} className='icon' />
+                                Discover  
+                            </Link>
+                        </li>
+
+
                         <li>
                             <Link to='/'>
                                 <FontAwesomeIcon icon={faGear} />
@@ -60,7 +72,7 @@ function Header() {
                         </li>
                     </ul>
                 </div>
-                <FontAwesomeIcon icon={faBars} className='menu-icon' />
+                {/* <FontAwesomeIcon icon={faBars} className='menu-icon' /> */}
             </div>
         </header>
     )

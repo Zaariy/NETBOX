@@ -1,0 +1,31 @@
+.cart-tv-show {
+    width: 150px;
+    margin-right: 1rem;
+    position: relative;
+
+}
+
+.cart-tv-show img {
+    width: 150px;
+    border-radius: 0.8em;
+}
+
+.cart-tv-show .add {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    font-size: 1.5rem;
+    background-color: rgba(128, 128, 128, 0.795);
+    display: flex;
+    border-radius: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart-tv-show .add:hover {
+    background-color: var(--red-color);
+}

@@ -15,7 +15,7 @@ header .brand img {
 
 @media (max-width: 576px) {
     header .brand img {
-        width: 140px
+        width: 100px
     }
 }
 
@@ -47,12 +47,7 @@ header .content .user {
     position: relative;
 }
 
-@media (max-width: 576px) {
-    header .content .user {
 
-        display: none;
-    }
-}
 
 header .content .user .avatar {
     border-radius: 50%;
@@ -69,6 +64,12 @@ header .content .icon-bell {
     cursor: pointer;
 }
 
+@media (max-width: 568px) {
+    header .content .icon-bell {
+        display: none;
+    }
+}
+
 header .content .icon-caret {
     margin-left: 1.2rem;
     cursor: pointer;
@@ -82,6 +83,7 @@ header .user .pop-menu-user {
     border-radius: 10px;
     display: none;
     z-index: 5;
+    width: 120px;
 }
 
 header .user .pop-menu-user li {

@@ -1,0 +1,12 @@
+.discover-tv-show {
+    display: flex;
+    gap: 10px;
+
+}
+
+@media (max-width: 768px) {
+
+    .discover-tv-show {
+        flex-direction: column;
+    }
+}

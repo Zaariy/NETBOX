@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import './style/main.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSearch } from '@fortawesome/free-solid-svg-icons';
-import  { API_KEY} from "../../hooks/useFetch";
-
+import { API_KEY } from '../../hooks/useFetch';
 function Search() {
     const [states, setStates] = useState({
         inputData: '',
@@ -15,7 +14,7 @@ function Search() {
     useEffect(() => {
         if (states.inputData.length !== 0) {
             
-            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${states.inputData}&page=1`).then((data) => {
+            axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=en-US&query=${states.inputData}&page=1`).then((data) => {
                 setStates((prv) => {
                     return {
                         inputData: states.inputData,
@@ -27,6 +26,7 @@ function Search() {
         }
         
     } , [states.inputData])
+    
     return (
         <React.Fragment>
 
@@ -48,18 +48,20 @@ function Search() {
                     { 
                         states.state ? (
                             states.data?.map((ele , index) => {
-                                
-                                return (
-                                    <li key={index}>
-                                        <Link to={'/'}><img src={`https://image.tmdb.org/t/p/w500${ele?.poster_path}`} alt="logo"></img></Link>
-                                        <div className="info">
-                                            <span className="title">{ele?.title }</span>
-                                            <span className="date">{ele?.release_date }</span>
-                                            <span className="vote">{ ele?.vote_average}</span>
-                                        </div>
-                                    </li>
-    
-                                )
+                                if (ele?.poster_path) {
+                                    return (
+                                        <li key={index}>
+                                            <Link to={`/tvshow/${ele?.name}`} state={{id : ele?.id}}><img src={`https://image.tmdb.org/t/p/w500${ele?.poster_path}`} alt="logo"></img></Link>
+                                            <div className="info">
+                                                <span className="title">{ele?.title || ele?.name }</span>
+                                                <span className="date">{ele?.release_date || ele?.first_air_date }</span>
+                                                <span className="vote">{ ele?.vote_average}</span>
+                                            </div>
+                                        </li>
+        
+                                    )
+
+                                } 
                             })       
                         
                         ) : null

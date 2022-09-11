@@ -1,10 +1,16 @@
 .favorite-movie {
     margin-top: 1.2rem;
     padding-bottom: 2rem;
+
 }
 
 .favorite-movie .carts {
-    height: 150px;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    padding-bottom: 0.8em;
+    min-height: 80px;
+
 }
 
 .favorite-movie .header {
@@ -19,24 +25,52 @@
 
 .favorite-movie .cart {
     width: 250px;
-    height: 100%;
+    height: 150px;
     display: flex;
-    /* justify-content: center; */
-    align-items: end;
+    align-items: flex-end;
     font-size: 1.2em;
     cursor: pointer;
     background-position: center;
     background-size: cover;
     border-radius: 1rem;
+    margin: 0 1em
 }
+
+@media (max-width: 576px) {
+    .favorite-movie .cart {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .favorite-movie .cart {
+        font-size: 0.9em;
+    }
+}
+
 
 .favorite-movie .cart:hover {
     opacity: 0.5;
 }
 
 .favorite-movie .cart .name {
-    width: 50%;
+    width: 250px;
     font-weight: 600;
     margin-left: 0.3em;
     margin-bottom: 0.3em;
+}
+
+.favorite-movie .carts::-webkit-scrollbar {
+    height: 10px;
+}
+
+.favorite-movie .carts::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 10px;
+}
+
+.favorite-movie .carts::-webkit-scrollbar-thumb {
+    background-color: var(--red-color);
+    border-radius: 10px;
 }

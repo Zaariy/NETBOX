@@ -1,6 +1,5 @@
 function setToLocalStorage(name, value) {
     // if localStorage is Empty
-    console.log(localStorage)
     if (localStorage.length === 0) {
         localStorage.setItem(name , [value] )
         return
@@ -16,8 +15,27 @@ function setToLocalStorage(name, value) {
 }
 
 function getToLocalStorage(name) {
-
-    return localStorage.getItem(name);
+    // return data as array
+    // we converted data from String to Array 
+    // using split() method
+    if (!localStorage.getItem('list_movies')) {
+        return false 
+    }
+    return localStorage.getItem(name).split(',');
 }
-
-export {setToLocalStorage , getToLocalStorage} 
+function checkMovieOnList(id) {
+    // return True of False
+    if (!localStorage.getItem('list_movies')) {
+        return 
+    }
+    if (localStorage.getItem('list_movies').includes(id)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+export {
+    setToLocalStorage,
+    getToLocalStorage,
+    checkMovieOnList
+} 

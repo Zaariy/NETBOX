@@ -1,0 +1,43 @@
+.menu-tv-show {
+    background-color: var(--black-color);
+    width: 20vw;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+@media (max-width : 768px) {
+    .menu-tv-show {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu-tv-show span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: gray;
+    padding-top: 1.2rem;
+    display: block;
+    padding-left: 0.8rem;
+}
+
+.menu-tv-show ul {
+    padding: 0;
+    padding-top: 1.2rem;
+    padding-left: 0.8rem;
+    box-sizing: border-box;
+}
+
+.menu-tv-show ul li {
+    margin: 1rem 0;
+    padding: 0.8rem;
+    width: calc(100% - 0.8rem);
+    border-radius: 0.8rem;
+    box-sizing: border-box;
+
+}
+
+.menu-tv-show ul li:hover {
+    background-color: var(--red-color);
+}

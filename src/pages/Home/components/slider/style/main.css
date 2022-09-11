@@ -205,9 +205,9 @@
     margin-top: 2em;
 }
 
-.episodes .carts::-webkit-scrollbar {
+/* .episodes .carts::-webkit-scrollbar {
     height: 2px;
-}
+} */
 
 .episodes .cart {
     width: 200px;
@@ -242,4 +242,17 @@
     align-items: center;
     justify-content: center;
     font-family: 'Abril Fatface', cursive;
+}
+
+.episodes select {
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.episodes select option {
+    background: transparent;
+    color: var(--black-cold-color);
+
 }
