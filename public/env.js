@@ -3,7 +3,7 @@ window.env = {
   "API_KEY": "052f4caba8cd0b00eb10123b9d776298",
   "APPDATA": "C:\\Users\\zaariy\\AppData\\Roaming",
   "asl.log": "Destination=file",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_15628_MNRTLNCMDPERBXDB",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_26180_RFSFHOOUYGZKTZDK",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
